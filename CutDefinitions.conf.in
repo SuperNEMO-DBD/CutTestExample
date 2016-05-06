@@ -1,0 +1,33 @@
+# -*- mode: conf-unix; -*-
+# List of multi-properties (datatools::multi_properties):
+
+#@description A list of cuts on instances of the "things" class
+#@key_label   "name"
+#@meta_label  "type"
+
+[name="ptdcut" type="snemo::cut::particle_track_data_cut"]
+#@description A cut that selects data from PTD's
+PTD_label : string = "PTD"
+mode.flag : boolean = false
+# flag.name : string = "test2"
+mode.has_non_associated_calorimeter_hits : boolean = false
+#range_non_associated_calorimeter_hits.min : integer = 3
+#range_non_associated_calorimeter_hits.max : integer = 3
+mode.has_particles : boolean = true
+mode.range_particles : boolean = true
+range_particles.min : integer = 2
+range_particles.max : integer = 2
+
+
+[name="ptdcut2" type="snemo::cut::particle_track_data_cut"]
+#@description A cut that selects data from PTD's
+PTD_label : string = "PTD"
+mode.flag : boolean = false
+# flag.name : string = "test2"
+mode.has_non_associated_calorimeter_hits : boolean = true
+range_non_associated_calorimeter_hits.min : integer = 0
+range_non_associated_calorimeter_hits.max : integer = 0
+mode.has_particles : boolean = false
+mode.range_particles : boolean = false
+#range_particles.min : integer = 2
+#range_particles.max : integer = 2
